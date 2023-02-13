@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder
-from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
 
 dataset = pd.read_csv("train_space.csv")
 
@@ -35,7 +35,7 @@ imputer = SimpleImputer(missing_values=np.nan, strategy="mean")
 imputer.fit(x_test)
 x_test = imputer.transform(x_test)
 
-log = LogisticRegression(class_weight = 'balanced')
+log = KNeighborsClassifier(n_neighbors=50, p=2, metric='minkowski')
 
 
 log.fit(x, y)
@@ -44,9 +44,9 @@ y_pred = log.predict(x_test)
 
 
 print(y_pred)
-dataset_test["Transported"] = y_pred
+# dataset_test["Transported"] = y_pred
 
-csv = dataset_test[['PassengerId', "Transported"]]
+# csv = dataset_test[['PassengerId', "Transported"]]
 
-csv.to_csv("submissionSpace.csv", index=False)
+# csv.to_csv("submission2.csv", index=False)
 

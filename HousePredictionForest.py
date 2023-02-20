@@ -1,19 +1,14 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 
 dataset = pd.read_csv("kc_house_data.csv")
 
 x = dataset.iloc[:, 3:-1].values
 y = dataset.iloc[:, 2].values
-
-# y = y.reshape(len(y), 1)
-
-
-
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
 
 
 

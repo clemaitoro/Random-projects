@@ -12,14 +12,9 @@ dataset_test = pd.read_csv("test.csv")
 dataset_test[["Survived"]] = 0
 
 
-
 dataset_train_reorder = dataset_train[["PassengerId", "Pclass", "Sex", "Age", "SibSp", "Parch", "Fare", "Name","Embarked","Ticket", "Cabin","Survived"]]
 
 dataset_test_reorder = dataset_test[["PassengerId", "Pclass", "Sex",  "Age", "SibSp", "Parch", "Fare",  "Name","Embarked", "Ticket", "Cabin","Survived"]]
-
-
-
-
 
 
 
@@ -59,11 +54,11 @@ y_pred = y_pred.round(decimals=0)
 print(y_pred)
 
 # ---------------------------- Exporting data --------------------
-# dataset_test_reorder["Survived"] = y_pred
-# 
-# csv = dataset_test_reorder[['PassengerId',"Survived"]]
-# 
-# csv.to_csv("submission.csv", index=False)
+dataset_test_reorder["Survived"] = y_pred
+
+csv = dataset_test_reorder[['PassengerId',"Survived"]]
+
+csv.to_csv("submission.csv", index=False)
 
 
 

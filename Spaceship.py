@@ -45,9 +45,9 @@ y_pred = log.predict(x_test)
 
 
 print(y_pred)
-# dataset_test["Transported"] = y_pred
+dataset_test["Transported"] = y_pred
 # 
-# csv = dataset_test[['PassengerId', "Transported"]]
+csv = dataset_test[['PassengerId', "Transported"]]
 # 
-# csv.to_csv("submission2.csv", index=False)
+csv.to_csv("submission2.csv", index=False)
 

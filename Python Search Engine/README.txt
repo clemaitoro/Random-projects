@@ -1,30 +1,9 @@
-Name:   Jacco te Poel   Student Number:     2978881
-Name:   Andrei-Eduard Lupica   Student Number:     2987775
 
 
-1. What did we implement?
 
-We implemented the following:
-- The basic assignment from the reader(2.24) under the function pearl.make_table(pairs)
+1. What did I implement?
 
-- The extra assignment counted table from the reader(2.25) under the function pearl.make_counted_table(pairs)
-
-    we changed a few function from the basic assignment to make this work.
-    like we change remove_duplicates to count howmany times it deleted a duplicate so we could count the words.
-    And we edited the sytax change to make it fit for the google.py in the basic it was [word, [file, file, ...]] 
-    we didnt want that for this one because we wanted to have the file and count in the same list: [word, [[file, count], [file, count], ...]]
-
-- The extra assignment density table from the reader(2.25) under the function pearl.make_density_table(pairs)
-
-    for the density we added a function to efficiently count the words in a file so it wouldn't have to go through the whole file again for each word.
-    so first we made a list of all files using the function pearl.density and get the previous list and only the elements containing the files remove the duplicates
-    and made another list for the amount of words we used the function util.words(file) then we used the amount
-    and changed a certain index of the table and devide it with the amount of words in a file. and put that value back in that certain index  
-
-
-2. How did we test it?
-
-We tested it by running the following command:
+I tested it by running the following command:
 
     import pearl
 

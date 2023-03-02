@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score,confusion_matrix
 from sklearn.linear_model import LogisticRegression
 
 
-dataset = pd.read_csv("IMDB Dataset.csv")
+dataset = pd.read_csv("/kaggle/input/imdb-dataset-of-50k-movie-reviews/IMDB Dataset.csv")
 
 nltk.download("stopwords")
 nltk.download("punkt")
